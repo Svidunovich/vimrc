@@ -1,17 +1,29 @@
 filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 
+Plug 'morhetz/gruvbox'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-airline/vim-airline'
-Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'ycm-core/YouCompleteMe'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
+Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
+let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
 
-colorscheme sublimemonokai
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_posix_standard = 1
+let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_concepts_highlight = 1
+
+
+colorscheme gruvbox
+set background=dark
+
 set termguicolors
 set exrc
 set secure
